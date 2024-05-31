@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: springboot
-          image: jayashrimahale22/kubernetes-demo:kubernetes-demo
+          image: jayashrimahale22/k8s-dockerpoc-demo:k8s-dockerpoc-demo
           ports:
             - containerPort: 8080
           env:
