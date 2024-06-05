@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.2.7.RELEASE'
 	id 'io.spring.dependency-management' version '1.0.9.RELEASE'
 	id 'java'
+	id 'org.sonarqube' version '3.3'
 }
 
 group = 'com.jhooq'
@@ -28,6 +29,16 @@ dependencies {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
 }
+
+sonarqube {
+    properties {
+        property 'sonar.projectKey', 'sonar_scan'
+        property 'sonar.organization', 'sonar_scan'
+        property 'sonar.host.url', 'http://3.109.155.221:9000/'
+        property 'sonar.login', 'b00e85aec1156311fb00226b59229c5975d123b4'
+    }
+}
+
 
 test {
 	useJUnitPlatform()
